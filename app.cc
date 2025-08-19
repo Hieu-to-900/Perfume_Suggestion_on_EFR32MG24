@@ -151,16 +151,6 @@ void app_init(void)
   generate_all_perfume_embeddings();
 }
 
-
-// Bổ sung các biến tĩnh để lưu dữ liệu đã được tiền xử lý
-//static std::vector<std::string> user_accords = {"white floral", "sweet"};
-//static std::vector<std::string> user_notes = {"citruses", "lemon"};
-//static std::string user_gender = "women";
-//static std::string user_longevity = "Very Strong";
-//static std::string user_sillage = "Heavy";
-//static float user_weighted_rating = 5.0f;
-
-
 static void DumpTensor(const TfLiteTensor* t, const char* name) {
   printf("%s: type=%d, dims=[", name, t->type);
   for (int i = 0; i < t->dims->size; ++i) printf("%d%s", t->dims->data[i], i+1<t->dims->size?",":"");
